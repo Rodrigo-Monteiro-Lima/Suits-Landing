@@ -535,7 +535,6 @@ i {
 }
 
 @media (max-width: 450px) {
-  /* Geral */
   body {
     overflow-x: hidden;
   }
@@ -545,7 +544,6 @@ i {
     font-size: 2rem;
   }
 
-  /* navbar */
   #navbar {
     display: none;
   }
@@ -568,7 +566,6 @@ i {
     font-size: 1rem;
   }
 
-  /* Áreas de atuação */
   .btn {
     align-self: initial;
   }
@@ -581,7 +578,6 @@ i {
     flex-wrap: wrap;
   }
 
-  /* Sobre nós */
   #about {
     gap: 0;
   }
@@ -606,13 +602,11 @@ i {
     border-bottom: 1px solid var(--secondary-text-color);
   }
 
-  /* Depoimentos */
   .text-container {
     text-align: center;
     padding: 2rem;
   }
 
-  /* Colaboradores */
   #team {
     margin-top: 2rem;
   }
@@ -625,7 +619,6 @@ i {
     flex-wrap: wrap;
   }
 
-  /* Contato */
   #contact {
     padding-bottom: 0;
   }
@@ -642,7 +635,6 @@ i {
     align-self: auto;
   }
 
-  /* Rodapé */
   #footer {
     flex-wrap: wrap;
   }
