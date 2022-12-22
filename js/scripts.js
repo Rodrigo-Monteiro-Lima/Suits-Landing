@@ -10,20 +10,31 @@ let slideIndex = 0;
 
 const smoothScroll = (e) => {
   e.preventDefault();
-
   const href = this.getAttribute('href');
   const offsetTop = document.querySelector(href).offsetTop;
-
   scroll({
     top: offsetTop,
     behavior: 'smooth',
   });
-
   setTimeout(() => {
     if (menu.classList.contains('menu-active')) {
       menu.classList.remove('menu-active');
     }
   }, 500);
+};
+
+const showSlides = () => {
+  slides.forEach((slide, index) => {
+    slide.classList.remove('active');
+    dots[index].classList.remove('active');
+  });
+  slideIndex++;
+  if (slideIndex > slides.length) {
+    slideIndex = 1;
+  }
+  slides[slideIndex - 1].classList.add('active');
+  dots[slideIndex - 1].classList.add('active');
+  setTimeout(showSlides, 3000);
 };
 
 [menuBtn, closeMenuBtn].forEach((btn) => {
@@ -35,3 +46,5 @@ const smoothScroll = (e) => {
 allLinks.forEach((link) => {
   link.addEventListener('click', smoothScroll);
 });
+
+showSlides();
