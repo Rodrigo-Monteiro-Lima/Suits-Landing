@@ -31,3 +31,7 @@ const smoothScroll = (e) => {
     menu.classList.toggle('menu-active');
   });
 });
+
+allLinks.forEach((link) => {
+  link.addEventListener('click', smoothScroll);
+});
