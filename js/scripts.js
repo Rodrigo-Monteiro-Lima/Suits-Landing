@@ -8,7 +8,7 @@ const slides = document.querySelectorAll('.banner');
 const dots = document.querySelectorAll('.dot');
 let slideIndex = 0;
 
-function smoothScroll(e) {
+const smoothScroll = (e) => {
   e.preventDefault();
 
   const href = this.getAttribute('href');
@@ -24,4 +24,10 @@ function smoothScroll(e) {
       menu.classList.remove('menu-active');
     }
   }, 500);
-}
+};
+
+[menuBtn, closeMenuBtn].forEach((btn) => {
+  btn.addEventListener('click', (e) => {
+    menu.classList.toggle('menu-active');
+  });
+});
